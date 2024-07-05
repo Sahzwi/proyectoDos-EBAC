@@ -1,0 +1,22 @@
+header {
+    section:first-child {
+        .header__logo {
+            width: 175px;
+        }
+
+        .header__menuButton {
+            width: 45px;
+        }
+    }
+
+    section:last-child {
+        nav {
+            a {
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 600;
+                color: #fff;
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+body {
+  font-family: "Ubuntu", Courier, monospace;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "header header header header" "intro intro intro ads" "footer footer footer footer";
+}
+
+header {
+  width: 100%;
+  box-sizing: border-box;
+  grid-area: header;
+  background-color: #000000;
+}
+header section:first-child {
+  display: flex;
+  justify-content: space-between;
+  gap: 120px;
+  align-items: center;
+  padding: 10px 25px;
+  margin: 0;
+  border: none;
+}
+header section:last-child {
+  padding: 10px 25px;
+  margin: 0;
+  border: none;
+}
+header section:last-child nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  align-items: center;
+}
+
+main .main__noticias {
+  grid-area: intro;
+}
+main .main__noticias section:first-child {
+  background-color: #000;
+}
+main .main__noticias section:first-child h1 {
+  color: #fff;
+}
+
+header section:first-child .header__logo {
+  width: 175px;
+}
+header section:first-child .header__menuButton {
+  width: 45px;
+}
+header section:last-child nav a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}/*# sourceMappingURL=styles.css.map */
