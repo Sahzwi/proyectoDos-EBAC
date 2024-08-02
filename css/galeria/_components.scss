@@ -20,3 +20,20 @@ header {
         }
     }
 }
+
+main {
+    .galeria__images {
+        background-color: #000;
+        
+        img {
+            width: 1260px;
+        }
+
+    }
+
+    .galeria__selector {
+        img {
+            width: 250px;
+        }
+    }
+}

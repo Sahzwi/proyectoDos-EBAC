@@ -1,0 +1,151 @@
+body {
+  font-family: "Ubuntu", Courier, monospace;
+}
+
+header {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #000000;
+  position: sticky;
+  top: 0px;
+  z-index: 3;
+}
+header section:first-child {
+  display: flex;
+  justify-content: space-between;
+  gap: 120px;
+  align-items: center;
+  padding: 10px 25px;
+  margin: 0;
+  border: none;
+}
+header section:last-child {
+  padding: 10px 25px;
+  margin: 0;
+  border: none;
+}
+header section:last-child nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  align-items: center;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "intro intro intro ads" "other other other ads" "bannerad bannerad bannerad ads";
+}
+main .main__news {
+  grid-area: intro;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 10px;
+  margin: 20px;
+  border: none;
+}
+main .main__otherNews {
+  grid-area: other;
+  padding: 20px 10px;
+  margin: 0 31px;
+  border: none;
+  background-color: #000000;
+}
+main .main__otherNews section {
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+main .main__otherNews section div {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #fff;
+}
+main .main__ads {
+  grid-area: ads;
+  padding: 70px 75px;
+  margin: 0;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+main .banner__ad {
+  grid-area: bannerad;
+  padding: 20px;
+  margin: 0 60px;
+  border: none;
+}
+
+header section:first-child .header__logo {
+  width: 150px;
+}
+header section:first-child .header__menuButton {
+  width: 45px;
+}
+header section:last-child nav a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+main .main__news section:first-child h1 {
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+  font-size: 22px;
+}
+main .main__news section:last-child h1 {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #fff;
+  background-color: #000;
+  position: absolute;
+  top: 735px;
+  z-index: 0;
+}
+main .main__news section:last-child div img {
+  width: 1030px;
+  padding: 0;
+  margin: 20px 50px;
+  border: 5px solid #000000;
+}
+main .main__news section:last-child div p {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 20px 50px;
+  margin: 0;
+  border: none;
+}
+main .main__otherNews h3 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 22px;
+}
+main .main__otherNews section {
+  padding: 0;
+  margin: 15px 10px;
+  border: none;
+}
+main .main__otherNews section img {
+  width: 100px;
+}
+main .main__otherNews section a {
+  font-size: 12px;
+  color: #fff;
+  text-decoration: none;
+}
+main .main__ads img {
+  width: 230px;
+}
+main .banner__ad img {
+  width: 935px;
+}/*# sourceMappingURL=styles.css.map */

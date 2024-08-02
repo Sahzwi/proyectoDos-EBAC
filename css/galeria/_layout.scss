@@ -1,20 +1,14 @@
 body {
     font-family: 'Ubuntu', Courier, monospace;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "header header header header"
-    "intro intro intro ads"
-    "footer footer footer footer"
-    ;
 }
 
 header {
     width: 100%;
     box-sizing: border-box;
-    grid-area: header;
     background-color: #000000;
+    position: sticky;
+    top: 0px;
+    z-index: 3;
 
     section:first-child {
         display: flex;
@@ -37,16 +31,22 @@ header {
 }
 
 main {
-    .main__noticias {
-        grid-area: intro;
-        //@include baseContainer(100px, 25px, none);
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "images selector"
+    ;
 
-        section:first-child {
-            background-color: #000;
+    background-color: #000000;
 
-            h1 {
-                color: #fff;
-            }
-        }
+    .galeria__images {
+        grid-area: images;
+    }
+
+    .galeria__selector {
+        grid-area: selector;
     }
 }
+
+//test

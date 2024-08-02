@@ -1,0 +1,85 @@
+body {
+    font-family: 'Ubuntu', Courier, monospace;
+}
+
+header {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #000000;
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+
+    section:first-child {
+        display: flex;
+        justify-content: space-between;
+        gap: 120px;
+        align-items: center;
+        @include baseContainer(10px 25px, 0, none);
+    }
+
+    section:last-child {
+        @include baseContainer(10px 25px, 0, none);
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            gap: 60px;
+            align-items: center;
+        }
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "intro intro intro ads"
+    "other other other ads"
+    "bannerad bannerad bannerad ads"
+    ;
+
+    .main__news {
+       grid-area: intro;
+       width: 100%;
+       box-sizing: border-box; 
+        @include baseContainer(20px 10px, 20px, none);
+    }
+
+    .main__otherNews {
+        grid-area: other;
+        @include baseContainer(20px 10px, 0 31px, none);
+        background-color: #000000;
+        
+        section {
+            display: flex;
+            gap: 10px;
+            z-index: 3;
+
+            div {
+                display: flex;
+                gap: 5px;
+                align-items: center;
+                @include baseContainer(0, 0, 1px solid #fff);
+            }
+        }
+       
+    }
+
+    .main__ads {
+        grid-area: ads;
+        @include baseContainer(70px 75px, 0, none);
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .banner__ad {
+        grid-area: bannerad;
+        @include baseContainer(20px, 0 60px, none);
+    }
+}
+

@@ -1,0 +1,101 @@
+header {
+    section:first-child {
+        .header__logo {
+            width: 150px;
+        }
+
+        .header__menuButton {
+            width: 45px;
+        }
+    }
+
+    section:last-child {
+        nav {
+            a {
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 600;
+                color: #fff;
+            }
+        }
+    }
+}
+
+main {
+    .main__news {
+        section:first-child {
+            h1 {
+                background-color: #000;
+                color: #fff;
+                font-weight: 600;
+                font-size: 22px;
+            }
+        }
+
+        section:last-child { 
+            h1 {
+                font-size: 28px;
+                font-weight: 900;
+                letter-spacing: 1px;
+                color: #fff;
+                background-color: #000;
+                position: absolute;
+                top: 540px;
+                z-index: 0;
+
+            }
+
+            div {
+                img:first-child {
+                    width: 330px;
+                    @include baseContainer(0, 35px 0 0 50px, 5px solid #000000)
+                }
+                
+                img:nth-child(2) {
+                    width: 660px;
+                    @include baseContainer(0, 0 50px 0 0, 5px solid #000000)
+                }
+
+                p {
+                    font-size: 18px;
+                    font-weight: 500;
+                    @include baseContainer(35px 50px, 0, none);
+                }
+            }
+        }
+    }
+
+    .main__otherNews {
+        h3 {
+            color: #fff;
+            font-weight: 600;
+            font-size: 22px;
+        }
+
+        section {
+            @include baseContainer(0, 15px 10px, none);
+
+            img {
+                width: 100px;
+            }
+            
+            a {
+                font-size: 12px;
+                color: #fff;
+                text-decoration: none;    
+            };
+        }
+    }
+
+    .main__ads {
+        img {
+            width: 230px;
+        }
+    }
+
+    .banner__ad {
+        img {
+            width: 935px;
+        }
+    }
+}
